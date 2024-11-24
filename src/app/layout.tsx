@@ -1,5 +1,11 @@
 import { Header } from "@/components/Header";
 import "../style/global.sass"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | ig.news",
+  description: "Generat",
+}
 
 export default function RootLayout({
   children,

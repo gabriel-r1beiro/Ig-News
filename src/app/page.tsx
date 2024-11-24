@@ -1,18 +1,10 @@
-import { Metadata } from "next";
+'use client'
 import styles from "./../style/home.module.sass";
 import { SubscribeButton } from "@/components/SubscribeButton";
-import { GetServerSideProps } from "next";
-import { useState } from "react";
 import { stripe } from "@/services/stripe";
+import { useState } from "react";
 
-export const metadata: Metadata = {
-    title: "Home | ig.news",
-    description: "Generat",
-}
-
-export default function Home() {
-  'use client'
-  
+export default function Home() {  
   const [product, setProducts] = useState({})
 
   const getServer = async () => {
@@ -29,7 +21,7 @@ export default function Home() {
   return (
     <main className={styles.contentConteiner}>
       <section className={styles.hero}>
-        <span>👏 Hey, Welcome</span>
+        <span>👏 Hi, Welcome</span>
         <h1>News about the <span>React</span> World.</h1>
         <p>
           Get access to all the publications <br />
